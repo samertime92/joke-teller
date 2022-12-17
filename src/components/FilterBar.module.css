@@ -1,0 +1,127 @@
+/* for samsung screens and other android phones like  s7 s8 a51 */
+
+
+@media only screen and (min-width: 360px) {
+
+
+    .filter-bar{
+        background:rgba(0, 0, 0, 0.501);
+        display:flex;
+        flex-direction: row;
+        border:4px solid rgba(0, 0, 0, 0.96) ;
+        border-radius: 500px;
+        margin:0px auto;
+        width:315px;
+        box-shadow: 3px 10px 5px rgba(0, 0, 0, 0.3);
+        transition:0.5s;
+        position:fixed;
+        transform: translate(-50%,50%);
+        left:50%;
+        bottom:10%
+        
+       }
+       .filter-bar button{
+        background:none;
+        max-width:100px;
+        width:80px;
+        margin:7px;
+        border-radius: 100px;
+        color:rgb(116, 116, 116);
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+        transition: 0.5s;
+        cursor:pointer;
+        font-size:10px;
+        padding:5px
+    
+    }
+
+}
+
+
+
+/* for iphone screens  phones like  iphone6 iphone 7 iphone 8 */
+
+@media only screen and (min-width: 375px) {
+
+
+    
+}
+
+/* for samsung and android  screens  phones like  s8+ s9+ s10+ s20+ s21+ s22+  */
+
+@media only screen and (min-width: 411px) {
+    .filter-bar button{
+        background:none;
+        max-width:100px;
+        width:80px;
+        margin:7px;
+        border-radius: 100px;
+        color:rgb(116, 116, 116);
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+        transition: 0.5s;
+        cursor:pointer;
+        font-size:10px;
+        padding:10px
+    
+    }
+    .filter-bar{
+        background:rgba(0, 0, 0, 0.501);
+        display:flex;
+        flex-direction: row;
+        border:4px solid rgba(0, 0, 0, 0.96) ;
+        border-radius: 500px;
+        margin:0px auto;
+        width:355px;
+        box-shadow: 3px 10px 5px rgba(0, 0, 0, 0.3);
+        transition:0.5s;
+        position:fixed;
+        transform: translate(-50%,50%);
+        left:50%;
+        bottom:10%
+        
+       }
+
+}
+
+
+@media only screen and (min-width: 768px) {
+    .filter-bar{
+        background:rgba(0, 0, 0, 0.501);
+        display:flex;
+        flex-direction: row;
+        border:5px solid rgba(0, 0, 0, 0.96) ;
+        border-radius: 500px;
+        margin:0px auto;
+        width:500px;
+        box-shadow: 3px 10px 5px rgba(0, 0, 0, 0.3);
+        transition:0.5s;
+        position:fixed;
+        transform: translate(-50%,50%);
+        left:50%;
+        bottom:10%
+        
+       }
+       .filter-bar:hover{
+        transition:0.5s;
+        border:5px solid rgba(0, 0, 0, 0.96) ;
+       
+       }
+       .filter-bar button{
+           background:none;
+           max-width:100px;
+           width:100px;
+           margin:10px;
+           border-radius: 100px;
+           color:rgb(116, 116, 116);
+           box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+           transition: 0.5s;
+           cursor:pointer
+       
+       }
+       .filter-bar button:hover{
+           transition: 0.2s;
+           background:rgb(62, 255, 62);
+       
+       }
+
+}

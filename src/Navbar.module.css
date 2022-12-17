@@ -1,0 +1,140 @@
+
+/* for samsung screens and other android phones like  s7 s8 a51 */
+    @media only screen and (min-width: 360px) {
+        .navbar{
+            width:100%;
+            background:linear-gradient(30deg ,#000000,#3c3c3c);
+            padding: 5px 10px ;
+            box-sizing:border-box;
+            border-bottom:10px  #1df47e solid;
+            box-shadow:5px 5px 10px rgba(0, 0, 0, 0.412);
+            z-index: 10;
+            position: fixed;
+            transform: translate(0%,0%);
+            top: 0%;
+        }
+        .navbar ul {
+            display: flex;
+            margin:0 auto;
+            max-width:100%;
+            align-items:center;
+            list-style-type: none
+        }
+        .navbar button, .navbar a {
+            margin-left:5px
+        }
+        .navbar a { 
+            color:rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 15px;
+            border:2px solid  rgb(255, 255, 255);
+            border-radius:10px;
+            margin:5px 0px 0px 10px;
+            padding:5px 10px;
+            align-content:center;
+            align-self:center;
+            min-width:10px;
+            max-width:10px;
+        }
+        .title {
+            position:relative;
+            margin-right: auto;
+            font-weight: bold;
+            font-size: 20px;
+            color:rgba(86, 86, 86, 0.639);
+            filter:drop-shadow(1px 1px 4px rgb(1, 1, 1));
+            left:-20px
+        }
+        .logo{
+            transition:1s;
+            width:23%;
+            height:23%
+        }
+}
+
+
+/* for iphone screens  phones like  iphone6 iphone 7 iphone 8 */
+
+@media only screen and (min-width: 375px) {
+
+    .navbar a { 
+        font-size: 18px;
+       
+        min-width:10px;
+        max-width:10px;
+    }
+
+}
+
+   /* for samsung and android  screens  phones like  s8+ s9+ s10+ s20+ s21+ s22+  */
+
+   @media only screen and (min-width: 411px) {
+
+    .navbar a { 
+        font-size: 20px;
+       
+        min-width:10px;
+        max-width:10px;
+    }
+    .title {
+        font-size: 25px;
+    }
+
+
+   }
+
+@media only screen and (min-width: 768px) {
+    .navbar{
+        width:100%;
+        background:linear-gradient(30deg ,#000000,#3c3c3c);
+        padding: 5px 10px ;
+        box-sizing:border-box;
+        border-bottom:10px  #1df47e solid;
+        box-shadow:5px 5px 10px rgba(0, 0, 0, 0.412);
+        z-index: 10;
+        position: fixed;
+        transform: translate(0%,0%);
+        top: 0%;
+    }
+    .navbar ul {
+        display: flex;
+        margin:0 auto;
+        max-width:1000px;
+        align-items:center;
+        list-style-type: none
+    }
+    .navbar button, .navbar a {
+        margin-left:16px
+    }
+    .navbar a { 
+        color:rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: 20px;
+        border:2px solid  rgb(255, 255, 255);
+        border-radius:10px;
+        margin:5px;
+        padding:5px 30px;
+        align-content:center;
+        align-self:center;
+        min-width:10px;
+        max-width:10px;
+    }
+    .navbar a:hover{
+        background-color: white;
+        color:black
+    }
+    .title {
+        margin-right: auto;
+        font-weight: bold;
+        font-size: 40px;
+        color:rgba(86, 86, 86, 0.639);
+        filter:drop-shadow(1px 1px 4px rgb(1, 1, 1));
+        
+    }
+    .logo{
+        transition:1s;
+        width:10%;
+        height:10%
+    }
+
+}

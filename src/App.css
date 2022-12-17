@@ -1,7 +1,16 @@
 .App {
   text-align: center;
-}
+  background-color: linear-gradient(0deg,#464949,#303131);
 
+}
+body{
+  background: linear-gradient(180deg,#17f7ff,#303131);
+  height:200vh;
+  width:100%;
+  min-width:100%;
+ 
+
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -28,6 +37,44 @@
   color: #61dafb;
 }
 
+
+
+.navbar{
+  width:100%;
+  background:linear-gradient(30deg ,#ff6bf3,#f495fd);
+  padding: 20px 10px ;
+  box-sizing:border-box;
+  border-bottom:10px  #ffffff solid;
+  box-shadow:5px 5px 10px rgba(0, 0, 0, 0.412);
+  z-index: 10;
+}
+.navbar ul {
+  display: flex;
+  margin:0 auto;
+  max-width:1000px;
+  align-items:center;
+  list-style-type: none
+}
+.navbar button, .navbar a {
+  margin-left:16px
+}
+.navbar a { 
+  color:rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 20px;
+  border:2px solid  white;
+  border-radius:10px;
+  margin:2px;
+  padding:5px 20px;
+  align-content:center;
+  align-self:center;
+}
+.title {
+  margin-right: auto;
+  font-weight: bold;
+  font-size: 40px;
+  color:white;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
