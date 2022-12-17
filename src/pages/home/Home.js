@@ -76,11 +76,11 @@ export default function Home() {
 
   return (
         <div className={styles['card-container']}>
-{error&& <h1>{error}</h1>}
-{!jokes&& <h1 className={styles.loading}>loading ....</h1>}
-<div id='cards'>
-{jokes && <Card  joke={oneJoke}  handleRandomClick={handleRandomClick} newJokesQuery={newJokesTrigger} addedJoke={addedJoke} />}
-</div>
+         {error&& <h1>{error}</h1>}
+         {!jokes&& <h1 className={styles.loading}>loading ....</h1>}
+         <div id='cards'>
+          {jokes && <Card  joke={oneJoke}  handleRandomClick={handleRandomClick} newJokesQuery={newJokesTrigger} addedJoke={addedJoke} />}
+         </div>
           <FilterBar  filterer={filterer} />
           <div id='new-jokes' className={styles['add-new-jokes']}>
           {jokes&&<AddNewJoke   />}
