@@ -12,6 +12,8 @@ import { useDataStore } from '../hooks/useDataStore';
 export default function Card({joke,handleRandomClick,newJokesQuery,addedJoke}) {
     let randomBtnClicked =true
     const [favBtn,setFavBtn]=useState(false)
+    const [mainBtn,setMainBtn]=useState(false)
+
     const {addDoc,response}=useDataStore('favCollection')
 
     const flip =()=>{
@@ -43,6 +45,7 @@ export default function Card({joke,handleRandomClick,newJokesQuery,addedJoke}) {
 
 
     const randomBtnFunctions =()=>{
+      
         setFavBtn(false)
 
         handleRandomClick(randomBtnClicked)
@@ -68,6 +71,10 @@ export default function Card({joke,handleRandomClick,newJokesQuery,addedJoke}) {
     
         }
         const addToFav=(setup,punchLine)=>{
+          setMainBtn(true)
+
+          document.querySelector('#main-btn').style.opacity='0.5'
+
           const favLine=document.querySelector('#fav-alert')
           const favBtn=document.querySelector('#fav-btn')
 
@@ -90,6 +97,8 @@ export default function Card({joke,handleRandomClick,newJokesQuery,addedJoke}) {
         setTimeout(()=>{
           favBtn.style.transform='scale(0)'
           document.querySelector('#control-btns').style.left='40%'
+          document.querySelector('#main-btn').style.opacity='1'
+          setMainBtn(false)
 
 
         },2300)
@@ -154,10 +163,14 @@ export default function Card({joke,handleRandomClick,newJokesQuery,addedJoke}) {
            <Fav className={styles['eye-icon']} />
 
          </div>}
-         <div id='next-joke-btn'  onClick={()=>{randomBtnFunctions()}} className={styles['next-joke-btn']}>
+        {!mainBtn &&<div id='next-joke-btn'   onClick={()=>{randomBtnFunctions()}} className={styles['next-joke-btn']}>
            <Shuffle />
 
-         </div>
+         </div>}
+         {mainBtn &&<div id='main-btn'   className={styles['next-joke-btn']}>
+           <Shuffle />
+
+         </div>}
          
      </div>
 

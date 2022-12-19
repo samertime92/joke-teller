@@ -2,6 +2,7 @@
 /* for samsung screens and other android phones like  s7 s8 a51 */
 
 @media only screen and (min-width: 360px) {
+   
     .favourite-alert{
         width:100%;
         background:black;
