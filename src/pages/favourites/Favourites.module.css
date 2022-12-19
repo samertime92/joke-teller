@@ -31,11 +31,11 @@
     
 
 }
-.title{
-    color:white;
-    position:relative;
-    transform: translate(0%,250%);
 
+.title{
+    color: white;
+    position: relative;
+    transform: translate(0%,50%);
 }
 .titles2{
     margin:0px auto;
@@ -88,5 +88,11 @@
         
     
     
+}
+.title{
+    color:white;
+    position:relative;
+    transform: translate(0%,250%);
+
 }
 }

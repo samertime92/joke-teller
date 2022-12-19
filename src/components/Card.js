@@ -17,6 +17,8 @@ export default function Card({joke,handleRandomClick,newJokesQuery,addedJoke}) {
     const flip =()=>{
     document.querySelector('#hint').style.display='none'
     document.querySelector('#punch-line-box').style.transition='0.3s'
+    document.querySelector('#shine').style.display='none'
+
   const card =document.querySelector('#card-container')
    card.style.animationPlayState='paused'
    card.style.transition='0.5s'

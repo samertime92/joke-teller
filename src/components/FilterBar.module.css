@@ -15,9 +15,9 @@
         box-shadow: 3px 10px 5px rgba(0, 0, 0, 0.3);
         transition:0.5s;
         position:absolute;
-        transform: translate(-50%,50%);
+        transform: translate(-50%,40%);
         left:50%;
-        bottom:10%
+        bottom:3%
         
        }
        .filter-bar button{
