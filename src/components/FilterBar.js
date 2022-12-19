@@ -1,5 +1,7 @@
 import React ,{useRef} from 'react'
 import styles from './FilterBar.module.css'
+
+ //this page is resposible on filtering the jokes objects  that came from the database to their own types
 export default function FilterBar({filterer}) {
   const query  = useRef('')
   let type = useRef('')

@@ -2,8 +2,41 @@
 /* for samsung screens and other android phones like  s7 s8 a51 */
 
 @media only screen and (min-width: 360px) {
-
-
+    .favourite-alert{
+        width:100%;
+        background:black;
+        color:white;
+        font-size:20px;
+        position:absolute;
+        height:50%;
+        align-content: center;
+        transition:1s;
+        transform: translate(-50%,100%);
+        left:50%;
+        top:100%
+    }
+    .shine{
+        background-color: rgba(251, 251, 251, 0.32);
+        width:100%;
+        height:80px;
+        position:absolute;
+        transform:skewY(30deg);
+        animation:moveShine 6s infinite  ease forwards
+    }
+    .hint{
+        filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.093));
+        background: linear-gradient(0deg,white, rgba(255, 255, 255, 0.485));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        transform: translate(-50%,0%);
+        width:100%;
+        max-width: 100%;
+        left:50%;
+        animation: textAnim 2.5s infinite ease forwards;
+        transition:1s;
+    }
+   
     .perspective-div{
         perspective:1000px;
         position:relative
@@ -106,13 +139,39 @@
     
     
     }
+    @keyframes textAnim {
+        0%{opacity: 0;letter-spacing: 3px;}
+        50%{opacity: 1;letter-spacing: 0px;}
+        100%{opacity: 0;letter-spacing: 3px;}
+        
+    }
+    @keyframes moveShine {
+        0%{top:-300px}
+        50%{top:600px}
+        100%{top:-300px}
+        
+    }
+    @keyframes moveCard {
+        0%{    transform: rotateY(170deg)scale(0.5);
+        }
+        50%{    transform: rotateY(140deg)scale(0.5);
+        }
+        100%{    transform: rotateY(170deg)scale(0.5);
+        }
+        
+    }
 
     
 
     /* for iphone screens  phones like  iphone6 iphone 7 iphone 8 */
 
 @media only screen and (min-width: 375px) {
-
+    .hint{
+     
+        transform: translate(-50%,-15%);
+        top:15%
+       
+    }
     .card-container {
         
         width:320px;

@@ -1,14 +1,13 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect,useRef} from 'react'
 import styles from './AddNewJoke.module.css'
  import { useDataStore } from '../hooks/useDataStore'
 import {ReactComponent as Border} from '../../src/assets/Border.svg';
  export default function AddNewJoke() {
 
-  const [type, setType]=useState('general')
   const [setup, setSetup]=useState('')
   const [punchline, setPunchLine]=useState('')
   
-    
+
   const {addDoc,response}=useDataStore('addedJokes')
   const handleSubmit=()=>{
     console.log(setup)
@@ -22,6 +21,30 @@ import {ReactComponent as Border} from '../../src/assets/Border.svg';
 
 
   }
+  const animate=()=>{
+    document.querySelector('#alert').style.transform='translate(-50%,0%)'
+    document.querySelector('#alert').style.top='0%'
+    document.querySelector('#alert').style.opacity='1'
+
+   setTimeout(()=>{
+    document.querySelector('#alert').style.transform='translate(-50%,-100%)'
+    document.querySelector('#alert').style.top='-100%'
+    document.querySelector('#alert').style.opacity='0'
+
+
+   },1500)
+  }
+  
+  
+  
+ 
+  useEffect(()=>{
+  console.log('scroll changed')
+    if(response.isPending){
+      animate()
+
+    }
+  },[response.isPending])
 
    return (
     <>
@@ -51,6 +74,9 @@ import {ReactComponent as Border} from '../../src/assets/Border.svg';
 
     {!response.isPending&&<button onClick={()=>handleSubmit()} className={styles.button} >+</button>}
     {response.isPending&&<button onClick={()=>handleSubmit()} className={styles.button} >;o</button>}
+    <br/>
+     <h1 id='alert' className={styles.alert}>your joke was added</h1>
+
 
     
     </>

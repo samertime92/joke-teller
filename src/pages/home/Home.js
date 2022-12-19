@@ -1,11 +1,12 @@
 import styles from './Home.module.css'
-import React , {useEffect,useState,useRef} from 'react'
+import React , {useEffect,useState} from 'react'
 import Card from '../../components/Card'
 import FilterBar from '../../components/FilterBar'
 import AddNewJoke from '../../components/AddNewJoke'
 import { useCollection } from '../../hooks/useCollection'
 import { useCollection2 } from '../../hooks/useCollection2'
 export default function Home() {
+
      const {jokes ,error}= useCollection('jokes','B64TqkXHM1dwSMYvblN7')
      const [oneJoke,setOneJoke]=useState(null)
      const[randomBtnClicked,setRandomBtnClicked]=useState(false)
@@ -20,7 +21,7 @@ export default function Home() {
 
 
 
-     //functions coming from children
+     //functions coming from children showcase data movment
      const handleRandomClick=(randomBtnClicked)=>{
         setRandomBtnClicked(randomBtnClicked)
         
@@ -59,11 +60,6 @@ export default function Home() {
                 }
          },700)
 
-         setTimeout(()=>{
-            document.querySelector('#new-jokes').style.display="block"
-            document.querySelector('#new-jokes').style.opacity=1
-         
-         },1000)
          window.scroll({
             top:0,
             left:0,
@@ -75,15 +71,23 @@ export default function Home() {
 
 
   return (
+
         <div className={styles['card-container']}>
          {error&& <h1>{error}</h1>}
+
+
          {!jokes&& <h1 className={styles.loading}>loading ....</h1>}
+          
+          
          <div id='cards'>
           {jokes && <Card  joke={oneJoke}  handleRandomClick={handleRandomClick} newJokesQuery={newJokesTrigger} addedJoke={addedJoke} />}
          </div>
+
+
           <FilterBar  filterer={filterer} />
           <div id='new-jokes' className={styles['add-new-jokes']}>
-          {jokes&&<AddNewJoke   />}
+
+          <AddNewJoke />
             
           </div>
 

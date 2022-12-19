@@ -1,5 +1,21 @@
 
 @media only screen and (min-width: 360px) {
+    .alert{
+        background:linear-gradient(180deg,rgba(0, 0, 0, 0.84) ,rgba(0, 0, 0, 0.678));
+        width:80%;
+        position:absolute;
+        transform: translate(-50%,200%);
+        left:50%;
+        top:200%;
+        border:solid 5px rgb(0, 255, 225);
+        border-radius: 20px;
+        color:white;
+        font-size:25px;
+        padding:20px;
+        opacity:0;
+        transition: 1s;
+    }
+    
     .setup{
         box-sizing: border-box;
         max-width: 300px;
@@ -44,7 +60,9 @@
                 transform: translate(-50%,100%)scale(0.7);
                 left:70%;
                 top:100%;
-                opacity:0.3
+                opacity:0.3;
+                animation: faceAnim 2.5s 1s infinite ease forwards;
+
         
             }
             .face2{
@@ -52,9 +70,24 @@
                 transform: translate(-50%,50%)scale(0.4);
                 left:30%;
                 top:150%;
-                opacity:0.2
+                opacity:0.2;
+                animation: faceAnim2  2.5s infinite ease forwards;
         
             }
+        @keyframes faceAnim {
+                0%{ transform: translate(-50%,70%)scale(0.7) }
+                50%{ transform: translate(-40%,50%)scale(0.4) }
+                100%{ transform: translate(-50%,70%)scale(0.7) }
+
+                
+            }
+        
+        @keyframes faceAnim2 {
+            0%{ transform: translate(-50%,50%)scale(0.4); }
+            50%{ transform: translate(-40%,50%)scale(0.6); }
+            100%{ transform: translate(-50%,50%)scale(0.4); }
+            
+        }
             .forms{
                 width:80%;
                 display:  grid;

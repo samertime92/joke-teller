@@ -13,9 +13,9 @@ export default function About() {
       <Border className={styles.face}/>
     <div className={styles.titles}>
       <h1>
-        test app using react js node and firebase as a backend 
-        it shows the joke and filters the joke 
-        also it can add new jokes to the database  click new to check them out  
+        a test app uses react js , node and firebase as a backend ,
+        it lists the jokes and controls the types ,
+        also it can add new jokes to the database  and can save existing ones to a favourite collection on a database
 
       <br/>
      <br/>
@@ -23,7 +23,7 @@ export default function About() {
 
 
         
-      this apps shows usage of react and its hooks useState useEffect  useref ,  reducer ,props, events, and data movement between parents and children and otherwise
+      this apps shows usage of react and its hooks useState useEffect  useref useContext,  reducer ,props, events, and data movement between parents and children and otherwise
 
       <br/>
      <br/>
@@ -32,15 +32,8 @@ export default function About() {
 
         
         
-       could add react context to complete the  road map of react   but it doesnt need it because its such a tiny idea
-
-     <br/>
-     <br/>
-     <br/>
-
-
-        shows experince in Javascript 
-           and  Css from styling to making it responsive for many devices
+        shows aswell  experince in Javascript  with  array actions ,dom manipulations , event handelers animation controlers 
+           and  Css from styling to  responsiveness for many devices and animations 
            </h1>
     </div>
     <h2 className={styles.titles2}> ©copyrights reserved 2022</h2>

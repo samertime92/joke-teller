@@ -2,10 +2,7 @@
 
 @media only screen and (min-width: 360px) {
 
-.titles{
-    overflow: scroll;
-    
-}
+
 .titles h1{
     margin:20px auto;
     padding:10px;

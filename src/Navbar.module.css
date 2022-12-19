@@ -3,6 +3,7 @@
     @media only screen and (min-width: 360px) {
         .navbar{
             width:100%;
+            max-width: 100%;
             background:linear-gradient(30deg ,#000000,#3c3c3c);
             padding: 5px 10px ;
             box-sizing:border-box;
@@ -49,9 +50,10 @@
             left:-20px
         }
         .logo{
-            transition:1s;
+            transition:2s;
             width:23%;
-            height:23%
+            height:23%;
+            position:relative
         }
 }
 

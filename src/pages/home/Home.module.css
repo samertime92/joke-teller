@@ -1,3 +1,16 @@
+@media only screen and (min-width: 360px) {
+    .loading{
+        width:100%;
+        margin:0px auto;
+        position: relative;
+        top:-300px;
+    animation: textAnim 0.4s infinite ease forwards;
+
+    }
+
+
+    
+}
 
 .card-container{
     margin:160px auto
@@ -7,12 +20,23 @@
     position:relative;
     top:250px;
     opacity:0;
-    display:none;
-    transition:1s
+    transition:1s;
+    animation: showUp   2s 2s 1 ease forwards
 
 }
 .loading{
     height:80vh;
     width:100%;
     margin:600px auto
+}
+@keyframes textAnim {
+    0%{letter-spacing: 10px;}
+    50%{letter-spacing: 0px;}
+    100%{letter-spacing: 10px;}
+    
+}
+@keyframes showUp {
+    0%{opacity: 0;display: none;}
+    100%{opacity: 1;display: inline-block;}
+    
 }

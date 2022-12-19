@@ -3,6 +3,8 @@ import { dataStore } from "../firebase/config"
 
 export const useCollection2=(collection)=>{
     const [newJokes,setNewJokes]=useState(null)
+    const [favJokes,setFavJokes]=useState(null)
+
     const [error2,setError2]=useState(null)
 
 useEffect(()=>{
@@ -17,6 +19,8 @@ console.log(ref)
             
         });
       setNewJokes(results)
+      setFavJokes(results)
+
       setError2(null)
         
         
@@ -29,5 +33,5 @@ console.log(ref)
 },
 [collection])
 
-return {newJokes ,error2}
+return {newJokes,favJokes ,error2,}
 }
