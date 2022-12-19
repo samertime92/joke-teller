@@ -133,7 +133,7 @@ export default function Card({joke,handleRandomClick,newJokesQuery,addedJoke}) {
   <div onClick={()=>flip()}  className={styles['perspective-div']}>
 
     <div id='card-container' className={styles['card-container']}>
-      <div className={styles.shine}>
+      <div id='shine' className={styles.shine}>
       </div>
     
       <h1 className={styles.setup} >{joke.setup} </h1>
