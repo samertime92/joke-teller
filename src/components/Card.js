@@ -73,7 +73,6 @@ export default function Card({joke,handleRandomClick,newJokesQuery,addedJoke}) {
         const addToFav=(setup,punchLine)=>{
           setMainBtn(true)
 
-          document.querySelector('#main-btn').style.opacity='0.5'
 
           const favLine=document.querySelector('#fav-alert')
           const favBtn=document.querySelector('#fav-btn')
@@ -86,7 +85,11 @@ export default function Card({joke,handleRandomClick,newJokesQuery,addedJoke}) {
           favLine.style.transition='0.5s'
           favLine.style.transform='translate(-50%,28%)'
           favLine.style.top='28%'
-
+          setTimeout(()=>{
+          document.querySelector('#main-btn').style.opacity='0.5'
+           
+  
+          },300)
         setTimeout(()=>{
           favLine.style.transform='translate(-50%,100%)'
           favLine.style.top='100%'
@@ -106,11 +109,11 @@ export default function Card({joke,handleRandomClick,newJokesQuery,addedJoke}) {
 
         }
         const reveal=()=>{
+
             setFavBtn(true)
             document.querySelector('#punch-line').style.filter='blur(0)'
             document.querySelector('#reveal-btn').style.background='white'
             setTimeout(()=>{
-            document.querySelector('#reveal-btn').style.background='initial'
 
              },400)
              }
